@@ -11,6 +11,7 @@
             $address = $n['address'];
             $phonenumber =  $n['phonenumber'];
             $dob =  $n['dob'];
+            $gender = $n['gender'];
             $bloodgroup =  $n['bloodgroup'];
         }
     }
@@ -39,7 +40,8 @@
             <th>Name</th>
             <th>Address</th>
             <th>Dob</th>
-            <th>contact</th>
+            <th>Gender</th>
+            <th>Contact</th>
             <th>Blood Group</th>
             <th colspan="2">Action</th>
         </tr>
@@ -50,14 +52,15 @@
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['address']; ?></td>
             <td><?php echo $row['dob']; ?></td>
+            <td><?php echo $row['gender']; ?></td>
             <td><?php echo $row['phonenumber']; ?></td>
             <td><?php echo $row['bloodgroup']; ?></td>
 
             <td>
-                <a href="configure.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+                <a href="admindonarlist.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
             </td>
             <td>
-                <a href="configure.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                <a href="admindonarlist.php?deldl=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
             </td>
         </tr>
     <?php } ?>
@@ -81,6 +84,10 @@
         <div class="input-group">
             <label>Contact</label>
             <input type="text" name="phonenumber" value="<?php echo $phonenumber; ?>">
+        </div>
+         <div class="input-group">
+            <label>Gender</label>
+            <input type="text" name="gender" value="<?php echo $gender; ?>">
         </div>
         <div class="input-group">
             <label>Bloodgroup</label>

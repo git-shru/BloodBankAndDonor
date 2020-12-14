@@ -10,8 +10,8 @@
 <form  action="admincontrol.php" ><hr>
 <center>
 	<div class="input-group">
-            Name : <input type="text" name="username" value="<?php echo $username; ?>"><br>
-            Password: <input type="password" password="password" value="<?php echo $password; ?>">
+            Name : <input type="text" name="username" value="<?php echo $username; ?>" required><br>
+            Password: <input type="password" password="password" value="<?php echo $password; ?>" required>
             <br>
             <button>LOG IN</button>
 			<br><br><br>

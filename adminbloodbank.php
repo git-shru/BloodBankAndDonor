@@ -3,7 +3,7 @@
     if (isset($_GET['edit'])) {
         $id = $_GET['edit'];
         $update = true;
-        $record = mysqli_query($db, "SELECT * FROM donorlist WHERE id=$id");
+        $record = mysqli_query($db, "SELECT * FROM bloodbank WHERE id=$id");
 
         if (mysqli_num_rows($record) == 1 ) {
             $n = mysqli_fetch_array($record);
@@ -28,7 +28,7 @@
             ?>
         </div>
     <?php endif ?>
-    <?php $results = mysqli_query($db, "SELECT * FROM donorlist"); ?>
+    <?php $results = mysqli_query($db, "SELECT * FROM bloodbank"); ?>
 
 <table>
     <thead>
@@ -38,9 +38,22 @@
             <th >Units</th>
             <th colspan="2">Action</th>
         </tr>
-    </thead>
+    </thead> 
 
-   
+ <?php while ($row = mysqli_fetch_array($results)) { ?>
+        <tr>
+            <td><?php echo $row['bloodgroup']; ?></td>
+            <td><?php echo $row['units']; ?></td>
+
+            <td>
+                <a href="adminbloodbank.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+            </td>
+
+            <td>
+                <a href="adminbloodbank.php?delbb=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+            </td>
+        </tr>
+    <?php } ?>
 </table>
 
 <form>
