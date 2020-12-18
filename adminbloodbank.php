@@ -1,5 +1,5 @@
-<?php  include('configure.php'); ?>
-<?php 
+<?php  include('configure.php');  
+
     if (isset($_GET['edit'])) {
         $id = $_GET['edit'];
         $update = true;
@@ -10,6 +10,31 @@
             $bloodgroup =  $n['bloodgroup'];
             $units = $n['units'];
         }
+    }
+
+     if (isset($_POST['save'])) {
+       
+        $bloodgroup = $_POST['bloodgroup'];
+        $units = $_POST['units'];
+
+        $q1="INSERT INTO bloodbank VALUES('' ,'$bloodgroup' , '$units')";
+        mysqli_query($db,$q1);
+            $_SESSION['message'] = "Data saved";       
+    }
+
+    if (isset($_POST['update'])) {
+         $id = $_POST['id'];
+        $bloodgroup = $_POST['bloodgroup'];
+        $units = $_POST['units'];
+
+        mysqli_query($db, "UPDATE bloodbank SET  bloodgroup='$bloodgroup' , units='$units'  WHERE id=$id");
+        $_SESSION['message'] = "Data updated!"; 
+        }
+
+    if (isset($_GET['delbb'])) {
+    $id = $_GET['delbb'];
+    mysqli_query($db, "DELETE FROM bloodbank WHERE id=$id");
+    $_SESSION['message'] = "Data deleted!"; 
     }
 ?>
 
@@ -29,7 +54,7 @@
         </div>
     <?php endif ?>
     <?php $results = mysqli_query($db, "SELECT * FROM bloodbank"); ?>
-
+<button  onclick="document.location='admincontrol.php'" >BACK</button>
 <table>
     <thead>
         <tr>
@@ -56,8 +81,8 @@
     <?php } ?>
 </table>
 
-<form>
-    <form method="post" action="configure.php" >
+
+    <form method="post" action="adminbloodbank.php" >
         <div class="input-group">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <label>Bloodgroup</label>
@@ -69,9 +94,9 @@
         </div>
         <div class="input-group">
             <?php if ($update == true): ?>
-    <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+    <input  class="btn" type="submit" name="update" value= "UPDATE" style="background: #556B2F;" >
     <?php else: ?>
-    <button class="btn" type="submit" name="save" >Save</button>
+    <input  class="btn" type="submit" name="save" value= "SAVE" >
 <?php endif ?>
         </div>
     </form>

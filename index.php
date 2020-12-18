@@ -1,25 +1,25 @@
-<?php  include('configure.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>Blood Bank And Donor System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newstyle.css">
 </head>
-<body>
+<body style="background-color: white">
 <center>
-<h1 style="color: blue;">LIFELINE</h1>
-<h5 style="color: red;">Give The Gift Of Life</h5>
-<hr>
+<h1 style="color: blue; font-size: 500%">LIFELINE</h1>
+<h4 style="color: red;">Give The Gift Of Life</h4>
 <div class="btn1">
-<button  onclick="document.location='login.php'" >LOG IN</button>
-<button  onclick="document.location='aboutus.php'" >ABOUT US</button>
+<input type="submit" onclick="document.location='login.php'" value="LOG IN" >
+<input type="submit" onclick="document.location='aboutus.php'" value ="ABOUT US">
 </div>
-<hr>
-<button  style="padding: 20px 20px 20px 20px" "color:blue" onclick="document.location='bloodbank.php'" >BLOOD BANK</button>
-<img src="2.jpg"  width="300" height="300">
-<button style="padding: 20px 20px 20px 20px" onclick="document.location='donorlist.php'" >DONOR LIST</button>
+<input type="submit" onclick="document.location='donatenow.php'" value="DONATE NOW">
 <br>
-<a title="Mail us the query" href="mailto:shrutidalvi35@gmail.com">CONTACT US</a>
+<input  type="submit"  onclick="document.location='bloodbank.php'" value="BLOOD BANK">
+<img src="2.jpg"  width="200" height="200">
+<input  type="submit"  onclick="document.location='donorlist.php'" value="DONOR LIST">
+<br>
+<a style="color: brown" title="Mail us the query" href="mailto:shrutidalvi35@gmail.com">CONTACT US</a>
 </center>
 </body>
 </html>   

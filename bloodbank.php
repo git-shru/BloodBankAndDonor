@@ -6,10 +6,6 @@
     <title>Blood Bank And Donor System</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style>
-div {
-  background-image: url('3.jpg');
-
-}
 </style>
 </head>
 <body>
@@ -20,6 +16,8 @@ div {
  <div style="text-align: center;">
         BLOOD BANK
  </div>
+ <center>
+ <img src="1.jpg"  width="200" height="150"></center>
 <table>
     <thead>
         <tr>

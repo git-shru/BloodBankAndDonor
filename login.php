@@ -3,19 +3,24 @@
 <html lang="en-US">
 <head>
     <title>Blood Bank And Donor System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<button  onclick="document.location='index.php'" >HOME</button>
-<form  action="admincontrol.php" ><hr>
-<center>
-	<div class="input-group">
-            Name : <input type="text" name="username" value="<?php echo $username; ?>" required><br>
-            Password: <input type="password" password="password" value="<?php echo $password; ?>" required>
-            <br>
-            <button>LOG IN</button>
-			<br><br><br>
-	</div>
+<input type="submit" class="fadeIn fourth" onclick="document.location='index.php'" value="HOME" >
+<form  action="admincontrol.php">
+<div class="wrapper fadeInDown">
+  	<div id="formContent">
+     <!-- Login Form -->
+    		<form>
+		      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+		      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+		      <input type="submit" class="fadeIn fourth" value="Log In">
+    		</form>
+  	</div>
+</div>
 </form>
 </body>
 </html> 

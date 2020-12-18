@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Blood Bank And Donor System</title>
+	<link rel="stylesheet" href="newstyle.css">
 </head>
-<body>
-<button  onclick="document.location='index.php'" >HOME</button>
+<body >
+<input type="submit"  onclick="document.location='index.php'" value="HOME">
 <center>
 <img src="4.jpg"  width="300" height="300">
 <h3>The main goal of the Blood Bank and Donor Management System project is to monitor Blood Bank data, Blood stock, Donor List.</h3>

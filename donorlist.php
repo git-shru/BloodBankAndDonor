@@ -37,7 +37,8 @@ div {
             <th>Name</th>
             <th>Address</th>
             <th>Dob</th>
-            <th>contact</th>
+            <th>Contact</th>
+            <th>Gender</th>
             <th>Blood Group</th>
         </tr>
     </thead>
@@ -47,7 +48,9 @@ div {
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['address']; ?></td>
             <td><?php echo $row['dob']; ?></td>
+
             <td><?php echo $row['phonenumber']; ?></td>
+            <td><?php echo $row['gender']; ?></td>
             <td><?php echo $row['bloodgroup']; ?></td>
         </tr>
     <?php } ?>
