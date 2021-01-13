@@ -13,7 +13,7 @@
 <input type="submit" onclick="document.location='login.php'" value="LOG IN" >
 <input type="submit" onclick="document.location='aboutus.php'" value ="ABOUT US">
 </div>
-<input type="submit" onclick="document.location='donatenow.php'" value="DONATE NOW">
+<input type="submit" onclick="document.location='donatenow.php'" value="DONATE">
 <br>
 <input  type="submit"  onclick="document.location='bloodbank.php'" value="BLOOD BANK">
 <img src="2.jpg"  width="250" height="250">
